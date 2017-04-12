@@ -6,8 +6,7 @@
 集成了nuke、rax-redux等常用weex rax开发工具。小巧灵活，手淘weex、千牛qap一网打尽，居家旅行必备良品。
 
 
-## nuke业务开发详细文档见 `http://site.alibaba.net/nuke/docs_tools/`
-
+## nuke业务开发详细文档见
 
 ## 用法
 
@@ -24,6 +23,7 @@ fie init nuke
 ```
 fie start
 ```
+
 将会启动三个html页面。
 
 - 配置页面：检查本地是否有模拟器开发环境，并提供ios模拟器调试的最佳实践,请在该页面进行扫码。
@@ -39,7 +39,7 @@ fie start
 
 > qap应用将被打成zip，用于上传离线包
 
-- 内置 qap插件支持内置，内置详情参见[内置文档](http://beta.nuke.taobao.org/nukedocs/changelog/changes-of-buildin-vendor.html)
+- 内置 qap插件支持内置，内置详情参见[内置文档](http://nuke.taobao.org/nukedocs/changelog/changes-of-buildin-vendor.html)
 
 
 ```
