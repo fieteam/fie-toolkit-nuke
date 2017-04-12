@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <title>Nuke降级H5</title>
+</head>
+<style>
+  body {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: flex;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+    }
+</style>
+<body style="margin: 0; padding: 0;">
+  
+</body>
+<script src="//g.alicdn.com/code/npm/web-rax-framework/0.1.2/dist/framework.web.min.js"></script>
+<script>
+  (function () {
+    function getURLParameter(name) {
+      return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search) || [null, ''])[1].replace(/\+/g, '%20')) || null;
+    }
+
+    var wxUrl = getURLParameter('_tpl');
+    if (!wxUrl) {
+      console.log('need _tpl');
+      return;
+    }
+
+    var oScript = document.createElement("script");
+    oScript.type = "text/javascript";
+    oScript.src = wxUrl;
+
+    var oHead = document.getElementsByTagName('HEAD').item(0);
+    oHead.appendChild(oScript);
+  })();
+
+</script>
+
+</html>
