@@ -1,66 +1,68 @@
 # fie-toolkit-nuke
 
+## changelog 
+
+当前版本 0.0.1 试用版本
+
 
 ## 说明
 
-集成了nuke、rax-redux等常用weex rax开发工具。小巧灵活，手淘weex、千牛qap一网打尽，居家旅行必备良品。
+集成了nuke、rax-redux等常用weex rax开发工具。小巧灵活，适用于千牛qap开发。
 
-
-## nuke业务开发详细文档见
 
 ## 用法
 
-### 初始化
+### 安装fie脚手架体系 [FIE](https://github.com/fieteam/fie)
+
+> npm install fie -g --registry=https://registry.npm.taobao.org
+
+### 初始化nuke项目
 
 ```
+
 fie init nuke
+
 ```
 
-可选择初始化的项目类型，目前支持**nuke普通项目**及**千牛qap**项目
+可选择初始化的项目类型，目前支持**千牛qap**项目，其他业务应用还在开发中。
 
 ### 开启本地服务器
 
 ```
+
 fie start
+
 ```
 
-将会启动三个html页面。
-
-- 配置页面：检查本地是否有模拟器开发环境，并提供ios模拟器调试的最佳实践,请在该页面进行扫码。
-
-- h5预览:weex在Html5的表现
-
-- weex-devtool调试页面:在配置页面扫码完成后，在该页面进行调试。
+**需占用本地的8080 、8088、3000三个端口号**
 
 ### 构建
 
 ```
+
 - fie build
 
 > qap应用将被打成zip，用于上传离线包
 
 - 内置 qap插件支持内置，内置详情参见[内置文档](http://nuke.taobao.org/nukedocs/changelog/changes-of-buildin-vendor.html)
 
+> 同时会生成用于降级的html页面，用户需自行发布，并将回调地址填入千牛开发者平台。
 
 ```
 
+### 快捷命令  fie add xxxx
 
-### 发布  
+在`fie.config.js`中添加如下的字段，则默认会将项目template文件夹下的simple目录的内容添加到`./src/pages/`目录下。具体使用参考默认生成的demo项目。
+
 ```
-fie publish
+addPath: {
+      simple: {path: './src/pages/'},
+      redux: { path: './src/pages/' },
+      data: { path: './data/',suffix:'json'},
+      h5:{path:'./h5/',suffix:'html'}
+    }
+
 ```
-两种发布形式：
-
-- qap 离线zip   **todo:千牛服务端未提供接口,需手动上传至qnconsole**
-
- - fie publish zip
-
-- awp package  **done:调用fie-plugin-awp**
-
-**如果本机从未使用过fie-awp，需调用fie awp config录入用户的awp平台appkey等基础信息**
-
- - fie publish -d  '日常'
- - fie publish -p  '线上'
 
 
 ## fie.config.js 配置
