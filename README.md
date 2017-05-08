@@ -73,7 +73,7 @@ addPath: {
     toolkit: 'fie-toolkit-nuke',
 
     toolkitConfig: {
-      // 本地服务器端口号
+      // 本地服务器端口号,目前版本不支持修改
       port: 8080,
       // 是否自动打开浏览器
       open: true,
