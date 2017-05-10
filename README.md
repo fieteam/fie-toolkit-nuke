@@ -34,9 +34,7 @@ toolkit-nuke是基于[FIE](https://github.com/fieteam/fie)体系的专为开发�
 
 ## 调试过程参考
 
-
-
-
+<iframe height=450 width=650 src="http://cloud.video.taobao.com//play/u/2527597559/p/2/e/6/t/1/55514078.mp4"></iframe>
 	
 ## 其他命令
 
@@ -63,14 +61,13 @@ addPath: {
 
 > 同时会生成用于降级的html页面，用户需自行发布，并将回调地址填入千牛开发者平台。
 
+<img src="https://img.alicdn.com/tfs/TB1nXOXRXXXXXcFXXXXXXXXXXXX-681-437.png"  width="400px" />
 
 - fie qrzip
 
-> 开启本地服务，用于将本地调试包快速上传至debug版客户端并替换客户端内的对应插件。
+> 开启本地服务，用于将本地调试包快速上传至debug版客户端并替换客户端内的对应插件。开发者使用手机扫码即可完成。
 
-
-
-
+<img src ="https://img.alicdn.com/tfs/TB1QxCdRXXXXXaGXXXXXXXXXXXX-678-760.png" width="400px" />
 
 
 ## 常见问题：
